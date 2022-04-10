@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <h1>Калькулятор</h1>
+    <form action="#" th:action="@{/calculator}" th:object="${values}" method="post">
+        <label for="firstValue">Первое значение:</label>
+        <input type="text" id="firstValue" th:field="*{firstValue}"/><br>
+        <label for="secondValue">Второе значение:</label>
+        <input type="text" id="secondValue" th:field="*{secondValue}"/><br>
+
+        <button type="submit" name="action" value="addition">+</button>
+        <button type="submit" name="action" value="subtraction">-</button>
+        <button type="submit" name="action" value="multiplication">*</button>
+        <button type="submit" name="action" value="division">/</button>
+    </form>
+</body>
+</html>
